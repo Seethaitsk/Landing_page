@@ -1,0 +1,793 @@
+/* ==========================================================================
+   AVIATOR GAMES API - LANDING PAGE CSS
+   ========================================================================== */
+
+:root {
+    --bg-main: #07080a;
+    --bg-card: #111216;
+    --brand-red: #f4001c;
+    --brand-red-hover: #c40016;
+    --text-main: #ffffff;
+    --text-muted: #c2c6cf;
+    /* Brightened for better visibility */
+    --font-primary: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* --- Utilities --- */
+.text-red {
+    color: var(--brand-red) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.bg-red {
+    background-color: var(--brand-red) !important;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+.font-small {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.small-text {
+    font-size: 0.8rem;
+}
+
+.border-red-glow {
+    border: 1px solid rgba(244, 0, 28, 0.3);
+    box-shadow: 0 0 20px rgba(244, 0, 28, 0.05);
+}
+
+.shadow-red {
+    box-shadow: 0 5px 20px rgba(244, 0, 28, 0.3);
+}
+
+/* Buttons */
+.btn-red {
+    background-color: var(--brand-red);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+    position: relative;
+    animation: ctaPulse 2.5s infinite;
+    overflow: hidden;
+}
+
+.btn-red::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: skewX(-25deg);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    20% { left: 200%; }
+    100% { left: 200%; }
+}
+
+@keyframes ctaPulse {
+    0% { box-shadow: 0 0 0 0 rgba(244, 0, 28, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(244, 0, 28, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(244, 0, 28, 0); }
+}
+
+.btn-red:hover {
+    background-color: var(--brand-red-hover);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(244, 0, 28, 0.4);
+    animation: none;
+}
+
+.btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: black;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: rgba(7, 8, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1.25rem !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--brand-red) !important;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    padding: 100px 0;
+    /* Lots of padding for big background */
+    background-image: url('banner2.jpg');
+    background-size: cover;
+    background-position: center right;
+    min-height: 85vh;
+    /* Large height for epic feel */
+    display: flex;
+    align-items: center;
+}
+
+/* Gradient overlay to make text readable on the left */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #07080a 0%, rgba(7, 8, 10, 0.95) 45%, rgba(7, 8, 10, 0) 80%);
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    max-width: 500px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.outline-icon {
+    -webkit-text-stroke: 1px var(--brand-red);
+    /* Make the inside transparent or dark, just subtle red glow */
+    text-shadow: 0 0 10px rgba(244, 0, 28, 0.5);
+}
+
+/* --- Features Section --- */
+.features-section {
+    padding: 40px 0;
+    /* Reduced padding */
+    background-color: var(--bg-main);
+    position: relative;
+    z-index: 5;
+}
+
+.features-box {
+    background-color: var(--bg-card);
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(244, 0, 28, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--brand-red);
+    transition: all 0.3s;
+}
+
+.feature-item:hover .icon-circle {
+    background-color: var(--brand-red);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(244, 0, 28, 0.4);
+}
+
+/* --- Marquee Animation (Trusted By) --- */
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 15px 0; /* Prevents vertical clipping of hover states and content */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.marquee-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+.stat-item-marquee {
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.stat-item-marquee:hover {
+    background: rgba(244, 0, 28, 0.1);
+    border-color: rgba(244, 0, 28, 0.5);
+    transform: translateY(-3px);
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* --- How It Works --- */
+.how-it-works-section {
+    padding: 60px 0 80px;
+    /* Reduced padding */
+    background-color: #040507;
+    /* Slightly darker */
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.step-icon-circle {
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    background-color: var(--bg-main);
+    transition: all 0.3s;
+}
+
+.how-it-works-section .col-lg-3:hover .step-icon-circle {
+    border-color: var(--brand-red);
+    color: var(--brand-red);
+    box-shadow: 0 0 20px rgba(244, 0, 28, 0.2);
+}
+
+.step-badge {
+    position: absolute;
+    top: -5px;
+    left: calc(50% - 45px);
+    /* Position on the edge of the circle */
+    width: 25px;
+    height: 25px;
+    background-color: var(--brand-red);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* --- Bottom CTA Section --- */
+.bottom-cta-section {
+    background-image: url('assets/footerimage.avif');
+    background-size: cover;
+    background-position: center;
+    padding: 70px 0;
+    /* Reduced padding */
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(7, 8, 10, 0.9) 0%, rgba(7, 8, 10, 0.7) 100%);
+    z-index: 1;
+}
+
+.trust-badge {
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(244, 0, 28, 0.1) 0%, transparent 70%);
+}
+
+.hover-white:hover {
+    color: white !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(180deg, rgba(7, 8, 10, 0.5) 0%, rgba(7, 8, 10, 0.95) 100%);
+    }
+
+    .hero-section {
+        background-position: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* ==========================================================================
+   REINTEGRATED COMPONENTS (Timeline, Hexagon, FAQ, Glassmorphism)
+   ========================================================================== */
+
+/* --- Glassmorphism Card (What You Get) --- */
+.what-you-get-card {
+    background: rgba(25, 25, 30, 0.6) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+}
+
+.what-you-get-card:hover {
+    border-color: rgba(244, 0, 28, 0.5);
+    box-shadow: 0 0 30px rgba(244, 0, 28, 0.1);
+}
+
+/* --- Integration Process Cards Enhancements --- */
+.process-card {
+    background: #111216;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px 15px 20px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 2;
+}
+
+.process-card:hover {
+    border-color: rgba(244, 0, 28, 0.5);
+    background: rgba(25, 25, 30, 0.95);
+    box-shadow: 0 15px 35px rgba(244, 0, 28, 0.2);
+    transform: translateY(-10px);
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.process-card:hover .step-icon {
+    color: var(--brand-red);
+    text-shadow: 0 0 15px rgba(244, 0, 28, 0.8);
+    transform: scale(1.1);
+}
+
+.flight-line {
+    position: absolute;
+    top: 55px;
+    /* Aligns roughly with center of icons */
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--brand-red) 20%, var(--brand-red) 80%, transparent);
+    z-index: 1;
+    opacity: 0.6;
+    box-shadow: 0 0 10px var(--brand-red);
+}
+
+.go-live-card {
+    border-color: rgba(244, 0, 28, 0.4);
+    animation: goLivePulse 2s infinite;
+}
+
+.go-live-card .step-icon {
+    color: var(--brand-red);
+    text-shadow: 0 0 15px rgba(244, 0, 28, 0.6);
+}
+
+@keyframes goLivePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(244, 0, 28, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(244, 0, 28, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(244, 0, 28, 0);
+    }
+}
+
+/* --- Hexagon Orbital Wheel --- */
+.hexagon-container {
+    position: relative;
+    width: 550px;
+    height: 550px;
+    margin: 0 auto;
+}
+
+.hexagon-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(#111216, #111216) padding-box, linear-gradient(135deg, #f4001c, #ff8a00) border-box;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    z-index: 10;
+    box-shadow: 0 0 40px rgba(244, 0, 28, 0.15), inset 0 0 20px rgba(244, 0, 28, 0.1);
+}
+
+.hexagon-center::before {
+    content: '';
+    position: absolute;
+    top: -20px; left: -20px; right: -20px; bottom: -20px;
+    background: radial-gradient(circle, rgba(244, 0, 28, 0.15) 0%, transparent 60%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.hexagon-orbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+}
+
+.hexagon-container:hover .hexagon-orbit {}
+
+.hexagon-container:hover .hex-item {}
+
+.hex-wrapper {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -80px;
+}
+
+.hex-item {
+    width: 100%;
+    height: 100%;
+    background: #1a1a1e;
+    border: none;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: all 0.3s;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+.hex-item:hover {
+    background: #202025;
+    transform: scale(1.05);
+}
+
+.hex-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #f4001c 0%, #ff8a00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.highlight-label {
+    font-size: 0.85rem;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 3px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.highlight-value {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* --- Bento Cards (Why Partner With Us) --- */
+.bento-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 24px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bento-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #f4001c, #ff8a00);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.bento-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.bento-card:hover::before {
+    opacity: 1;
+}
+
+.bento-card i.bi {
+    background: linear-gradient(135deg, #f4001c 0%, #ff8a00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent !important;
+    font-size: 2rem !important;
+    margin-bottom: 15px !important;
+    display: inline-block;
+}
+
+.bento-card-wide {
+    background: linear-gradient(135deg, rgba(244, 0, 28, 0.1) 0%, rgba(244, 0, 28, 0.02) 100%);
+    border: 1px solid rgba(244, 0, 28, 0.3);
+}
+
+.bento-card-wide:hover {
+    background: linear-gradient(135deg, rgba(244, 0, 28, 0.15) 0%, rgba(244, 0, 28, 0.05) 100%);
+    border-color: rgba(244, 0, 28, 0.5);
+    box-shadow: 0 15px 35px rgba(244, 0, 28, 0.2);
+}
+
+.bento-card-wide i.bi {
+    font-size: 2.5rem !important;
+    margin-bottom: 0 !important;
+}
+
+/* Positioning the 6 hex items in a circle */
+.hex-wrapper-1 {
+    transform: rotate(0deg) translateY(-180px);
+}
+
+.hex-wrapper-2 {
+    transform: rotate(60deg) translateY(-180px);
+}
+
+.hex-wrapper-3 {
+    transform: rotate(120deg) translateY(-180px);
+}
+
+.hex-wrapper-4 {
+    transform: rotate(180deg) translateY(-180px);
+}
+
+.hex-wrapper-5 {
+    transform: rotate(240deg) translateY(-180px);
+}
+
+.hex-wrapper-6 {
+    transform: rotate(300deg) translateY(-180px);
+}
+
+/* Counter-spin so text stays upright (static now) */
+.hex-item-1 {
+    transform: rotate(0deg);
+}
+
+.hex-item-2 {
+    transform: rotate(-60deg);
+}
+
+.hex-item-3 {
+    transform: rotate(-120deg);
+}
+
+.hex-item-4 {
+    transform: rotate(-180deg);
+}
+
+.hex-item-5 {
+    transform: rotate(-240deg);
+}
+
+.hex-item-6 {
+    transform: rotate(-300deg);
+}
+
+/* Keyframes removed as animation is disabled */
+
+.hexagon-mobile-grid {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .hexagon-container {
+        display: none;
+    }
+
+    .hexagon-mobile-grid {
+        display: flex;
+    }
+
+    .highlight-card {
+        background: #111216;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* --- FAQ Accordion --- */
+.accordion-item {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 10px;
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background-color: var(--bg-card);
+    color: white;
+    font-weight: 600;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(244, 0, 28, 0.1);
+    color: var(--brand-red);
+}
+
+.accordion-button::after {
+    filter: invert(1);
+}
+
+.accordion-body {
+    background-color: var(--bg-card);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* --- Sticky CTA Bar --- */
+.sticky-cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 12, 16, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(244, 0, 28, 0.3);
+    padding: 15px 15px;
+    z-index: 1000;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sticky-cta-bar.visible {
+    transform: translateY(0);
+}
+
+.btn-red {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-red::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.btn-red:hover::after {
+    opacity: 1;
+    transform: rotate(45deg) translate(20%, 20%);
+}
+
+/* --- WhatsApp Floating Button --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 90px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    animation: floatGlow 3s infinite alternate;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+@keyframes floatGlow {
+    0% { box-shadow: 0 0 15px rgba(37, 211, 102, 0.3); transform: translateY(0); }
+    100% { box-shadow: 0 0 25px rgba(37, 211, 102, 0.6); transform: translateY(-5px); }
+}

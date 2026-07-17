@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviator API Integration | #1 Crash Game</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark sticky-top py-3">
+        <div class="container justify-content-between">
+            <a class="navbar-brand text-decoration-none d-flex align-items-center" href="https://aviatorgames.ai/"
+                target="_blank">
+                <img src="assets/Aviatorgameprovider.png" alt="Aviator Logo" style="height: 40px; object-fit: contain;">
+            </a>
+            <div class="d-flex">
+                <a href="https://aviatorgames.ai/" target="_blank" class="btn btn-red fw-bold px-4 rounded-pill">GET API
+                    DEMO</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative z-3">
+            <div class="row">
+                <!-- Left Content -->
+                <div class="col-lg-7 text-start pt-2" data-aos="fade-right">
+
+                    <h1 class="hero-title text-white text-uppercase">
+                        Integrate the World's<br><span class="text-red">#1 Crash Game</span> Into Your Platform
+                    </h1>
+
+                    <h5 class="text-white mt-3 fw-bold">
+                        Increase Player Engagement. Boost Revenue. Launch Faster.
+                    </h5>
+
+                    <p class="hero-subtitle text-light mt-3 mb-4">
+                        Join leading iGaming operators by integrating SPRIBE Aviator, the industry's most popular crash
+                        game. Deliver an exciting, provably fair gaming experience that keeps players coming back while
+                        maximizing your platform's earning potential.
+                    </p>
+
+                    <!-- Mini Features Grid -->
+                    <div class="row g-4 mb-5 hero-mini-features">
+                        <div class="col-sm-6 d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-red fs-4 me-3 outline-icon"></i>
+                            <span class="text-white fw-bold small">Official Authorized Integration</span>
+                        </div>
+                        <div class="col-sm-6 d-flex align-items-center">
+                            <i class="bi bi-rocket-fill text-red fs-4 me-3 outline-icon"></i>
+                            <span class="text-white fw-bold small">Fast API Setup</span>
+                        </div>
+                        <div class="col-sm-6 d-flex align-items-center">
+                            <i class="bi bi-graph-up-arrow text-red fs-4 me-3 outline-icon"></i>
+                            <span class="text-white fw-bold small">Up to 97% RTP</span>
+                        </div>
+                        <div class="col-sm-6 d-flex align-items-center">
+                            <i class="bi bi-phone-fill text-red fs-4 me-3 outline-icon"></i>
+                            <span class="text-white fw-bold small">Mobile & Desktop Ready</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="https://aviatorgames.ai/" target="_blank"
+                            class="btn btn-red btn-lg rounded-pill px-4 fw-bold shadow-red d-flex align-items-center">
+                            Get Integration Demo <i class="bi bi-arrow-right-circle-fill ms-2 fs-5"></i>
+                        </a>
+                        <a href="https://aviatorgames.ai/" target="_blank"
+                            class="btn btn-outline-light btn-lg rounded-pill px-4 fw-bold">
+                            Talk to Our Experts
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section (Infinite Marquee) -->
+    <section class="stats-section bg-black py-4 mb-5 border-bottom border-dark overflow-hidden">
+        <div class="container-fluid text-center">
+            <h6 class="text-muted fw-bold mb-4 text-uppercase tracking-wide">Trusted by Leading Gaming Platforms</h6>
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- Set 1 -->
+                    <div class="stat-item-marquee">
+                        <i class="bi bi-trophy-fill text-red fs-3 me-3"></i>
+                        <div class="text-start">
+                            <h6 class="text-white fw-bold mb-0 text-uppercase">World's #1</h6>
+                            <span class="text-muted small">Crash Game</span>
+                        </div>
+                    </div>
+                    <div class="stat-item-marquee">
+                        <i class="bi bi-people-fill text-red fs-3 me-3"></i>
+                        <div class="text-start">
+                            <h6 class="text-white fw-bold mb-0 text-uppercase">Millions of</h6>
+                            <span class="text-muted small">Active Players</span>
+                        </div>
+                    </div>
+                    <div class="stat-item-marquee">
+                        <i class="bi bi-shield-check text-red fs-3 me-3"></i>
+                        <div class="text-start">
+                            <h6 class="text-white fw-bold mb-0 text-uppercase">Provably Fair</h6>
+                            <span class="text-muted small">Technology</span>
+                        </div>
+                    </div>
+                    <div class="stat-item-marquee">
+                        <i class="bi bi-headset text-red fs-3 me-3"></i>
+                        <div class="text-start">
+                            <h6 class="text-white fw-bold mb-0 text-uppercase">24/7</h6>
+                            <span class="text-muted small">Technical Support</span>
+                        </div>
+                    </div>
+                    <!-- Duplicate Set 1 for seamless looping -->
+                    <div class="stat-item-marquee">
+                        <i class="bi bi-trophy-fill text-red fs-3 me-3"></i>
+                        <div class="text-start">
+                            <h6 class="text-white fw-bold mb-0 text-uppercase">World's #1</h6>
+                            <span class="text-muted small">Crash Game</span>
+                        </div>
+                    </div>
+                    <div class="stat-item-marquee">
+                        <i class="bi bi-people-fill text-red fs-3 me-3"></i>
+                        <div class="text-start">
+                            <h6 class="text-white fw-bold mb-0 text-uppercase">Millions of</h6>
+                            <span class="text-muted small">Active Players</span>
+                        </div>
+                    </div>
+                    <div class="stat-item-marquee">
+                        <i class="bi bi-shield-check text-red fs-3 me-3"></i>
+                        <div class="text-start">
+                            <h6 class="text-white fw-bold mb-0 text-uppercase">Provably Fair</h6>
+                            <span class="text-muted small">Technology</span>
+                        </div>
+                    </div>
+                    <div class="stat-item-marquee">
+                        <i class="bi bi-headset text-red fs-3 me-3"></i>
+                        <div class="text-start">
+                            <h6 class="text-white fw-bold mb-0 text-uppercase">24/7</h6>
+                            <span class="text-muted small">Technical Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Aviator (Powerful Features) Section -->
+    <section class="features-section" id="features">
+        <div class="container text-center" data-aos="fade-up">
+            <h2 class="section-title text-white mb-4">Why Choose <span class="text-red">SPRIBE Aviator?</span></h2>
+
+            <div class="features-box border-red-glow rounded-4 p-4 p-lg-5">
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-6 col-md-4 col-lg-4">
+                        <div class="feature-item">
+                            <div class="icon-circle mx-auto mb-3"><i class="bi bi-lightning-charge-fill"></i></div>
+                            <h6 class="text-white fw-bold mb-2 text-uppercase font-small">Fast API Integration</h6>
+                            <p class="text-muted small lh-sm">Launch Aviator on your platform quickly with a simple and
+                                developer-friendly API.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-4">
+                        <div class="feature-item">
+                            <div class="icon-circle mx-auto mb-3"><i class="bi bi-graph-up-arrow"></i></div>
+                            <h6 class="text-white fw-bold mb-2 text-uppercase font-small">Maximum Revenue Potential</h6>
+                            <p class="text-muted small lh-sm">Low integration cost combined with high player engagement
+                                delivers excellent ROI.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-4">
+                        <div class="feature-item">
+                            <div class="icon-circle mx-auto mb-3"><i class="bi bi-magnet-fill"></i></div>
+                            <h6 class="text-white fw-bold mb-2 text-uppercase font-small">Player Retention</h6>
+                            <p class="text-muted small lh-sm">Fast-paced gameplay encourages repeat sessions and longer
+                                play time.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-4">
+                        <div class="feature-item">
+                            <div class="icon-circle mx-auto mb-3"><i class="bi bi-shield-lock-fill"></i></div>
+                            <h6 class="text-white fw-bold mb-2 text-uppercase font-small">Provably Fair Technology</h6>
+                            <p class="text-muted small lh-sm">Every game round is transparent and verifiable, building
+                                player trust.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-4">
+                        <div class="feature-item">
+                            <div class="icon-circle mx-auto mb-3"><i class="bi bi-laptop"></i></div>
+                            <h6 class="text-white fw-bold mb-2 text-uppercase font-small">Cross-Platform Compatibility
+                            </h6>
+                            <p class="text-muted small lh-sm">Optimized for desktop, Android, and iOS devices.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-4">
+                        <div class="feature-item">
+                            <div class="icon-circle mx-auto mb-3"><i class="bi bi-headset"></i></div>
+                            <h6 class="text-white fw-bold mb-2 text-uppercase font-small">Dedicated Support</h6>
+                            <p class="text-muted small lh-sm">Our technical and account management teams assist you
+                                throughout your integration journey.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Aviator Section -->
+    <section class="py-5" style="background-color: #040507;">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="text-white fw-black text-uppercase mb-4">What is <span class="text-red">Aviator?</span>
+                    </h2>
+                    <p class="text-muted mb-3">
+                        Aviator is a multiplayer crash game where a virtual plane takes off while the multiplier
+                        continuously increases.
+                    </p>
+                    <p class="text-muted mb-3">
+                        Players choose when to cash out before the plane flies away. The longer they wait, the higher
+                        the multiplier—but if the plane flies away first, the bet is lost.
+                    </p>
+                    <p class="text-muted">
+                        This simple yet exciting concept has made Aviator one of the highest-performing games in the
+                        iGaming industry.
+                    </p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card bg-transparent border-red-glow p-4 rounded-4"
+                        style="background: rgba(25, 25, 30, 0.6) !important; backdrop-filter: blur(15px);">
+                        <h4 class="text-white fw-bold mb-4 border-bottom border-danger pb-3">Why Players Love Aviator
+                        </h4>
+                        <ul class="list-unstyled mb-0 player-love-list">
+                            <li class="mb-3 d-flex"><i class="bi bi-controller text-red me-3 fs-5"></i>
+                                <div><strong class="text-white d-block">Real-Time Multiplayer Experience</strong><span
+                                        class="text-muted small">Play alongside thousands of players worldwide.</span>
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex"><i class="bi bi-graph-up text-red me-3 fs-5"></i>
+                                <div><strong class="text-white d-block">Live Multipliers</strong><span
+                                        class="text-muted small">Watch the multiplier rise in real time for thrilling
+                                        gameplay.</span></div>
+                            </li>
+                            <li class="mb-3 d-flex"><i class="bi bi-lightning-fill text-red me-3 fs-5"></i>
+                                <div><strong class="text-white d-block">Instant Betting</strong><span
+                                        class="text-muted small">Quick betting rounds keep players engaged.</span></div>
+                            </li>
+                            <li class="mb-3 d-flex"><i class="bi bi-chat-dots-fill text-red me-3 fs-5"></i>
+                                <div><strong class="text-white d-block">Live Chat Community</strong><span
+                                        class="text-muted small">Interactive chat enhances the social gaming
+                                        experience.</span></div>
+                            </li>
+                            <li class="mb-0 d-flex"><i class="bi bi-shield-check text-red me-3 fs-5"></i>
+                                <div><strong class="text-white d-block">Transparent Gameplay</strong><span
+                                        class="text-muted small">Provably fair mechanics ensure every round is
+                                        trustworthy.</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Benefits Section -->
+    <section class="py-5 bg-black border-top border-bottom border-dark">
+        <div class="container text-center" data-aos="fade-up">
+            <h2 class="text-white fw-black text-uppercase mb-5">Business <span class="text-red">Benefits</span></h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 col-lg-2">
+                    <div class="p-3 rounded-3 bento-card text-center">
+                        <i class="bi bi-person-check-fill text-red fs-1 mb-3"></i>
+                        <h6 class="text-white fw-bold mb-2">Increase Player Retention</h6>
+                        <p class="text-muted small mb-0" style="font-size: 0.75rem;">Aviator encourages frequent
+                            gameplay with quick rounds.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="p-3 rounded-3 bento-card text-center">
+                        <i class="bi bi-cash-coin text-red fs-1 mb-3"></i>
+                        <h6 class="text-white fw-bold mb-2">Higher Platform Revenue</h6>
+                        <p class="text-muted small mb-0" style="font-size: 0.75rem;">Generate consistent revenue through
+                            a highly profitable game.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="p-3 rounded-3 bento-card text-center">
+                        <i class="bi bi-code-slash text-red fs-1 mb-3"></i>
+                        <h6 class="text-white fw-bold mb-2">Easy Integration</h6>
+                        <p class="text-muted small mb-0" style="font-size: 0.75rem;">Developer-friendly APIs reduce
+                            implementation time.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="p-3 rounded-3 bento-card text-center">
+                        <i class="bi bi-tools text-red fs-1 mb-3"></i>
+                        <h6 class="text-white fw-bold mb-2">Low Maintenance</h6>
+                        <p class="text-muted small mb-0" style="font-size: 0.75rem;">Stable infrastructure with ongoing
+                            technical support.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="p-3 rounded-3 bento-card text-center">
+                        <i class="bi bi-globe-americas text-red fs-1 mb-3"></i>
+                        <h6 class="text-white fw-bold mb-2">Global Popularity</h6>
+                        <p class="text-muted small mb-0" style="font-size: 0.75rem;">Enjoyed by millions of players
+                            worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Partner With Us, Commercial Highlights, & Timeline -->
+    <section class="content-section py-5 mb-5" style="background-color: var(--bg-main); overflow: hidden;">
+        <div class="container">
+            <div class="row g-4 align-items-stretch mb-5">
+
+                <!-- 2. Commercial Highlights (Left) -->
+                <div class="col-lg-6 text-center pe-lg-4" data-aos="fade-right">
+                    <h2 class="section-title text-white text-uppercase mb-5">Commercial <span
+                            class="text-red">Highlights</span></h2>
+
+                    <div class="row align-items-center">
+                        <div class="col-12">
+
+                            <!-- Desktop Rotating Hexagon Wheel -->
+                            <div class="hexagon-container" data-aos="zoom-in">
+                                <div class="hexagon-center">
+                                    SPRIBE<br><span style="color: var(--brand-red);">AVIATOR</span>
+                                </div>
+                                <div class="hexagon-orbit">
+
+                                    <!-- Hex 1 -->
+                                    <div class="hex-wrapper hex-wrapper-1">
+                                        <div class="hex-item hex-item-1">
+                                            <i class="bi bi-gear-fill hex-icon"></i>
+                                            <div class="highlight-label">Setup Process</div>
+                                            <p class="highlight-value">Fast & Simple</p>
+                                        </div>
+                                    </div>
+                                    <!-- Hex 2 -->
+                                    <div class="hex-wrapper hex-wrapper-2">
+                                        <div class="hex-item hex-item-2">
+                                            <i class="bi bi-cash-stack hex-icon"></i>
+                                            <div class="highlight-label">Revenue Model</div>
+                                            <p class="highlight-value">Competitive Share</p>
+                                        </div>
+                                    </div>
+                                    <!-- Hex 3 -->
+                                    <div class="hex-wrapper hex-wrapper-3">
+                                        <div class="hex-item hex-item-3">
+                                            <i class="bi bi-lightning-charge-fill hex-icon"></i>
+                                            <div class="highlight-label">RTP</div>
+                                            <p class="highlight-value">Up to 97%</p>
+                                        </div>
+                                    </div>
+                                    <!-- Hex 4 -->
+                                    <div class="hex-wrapper hex-wrapper-4">
+                                        <div class="hex-item hex-item-4">
+                                            <i class="bi bi-code-square hex-icon"></i>
+                                            <div class="highlight-label">API</div>
+                                            <p class="highlight-value">Secure REST Integration</p>
+                                        </div>
+                                    </div>
+                                    <!-- Hex 5 -->
+                                    <div class="hex-wrapper hex-wrapper-5">
+                                        <div class="hex-item hex-item-5">
+                                            <i class="bi bi-laptop hex-icon"></i>
+                                            <div class="highlight-label">Compatibility</div>
+                                            <p class="highlight-value">Mobile & Desktop</p>
+                                        </div>
+                                    </div>
+                                    <!-- Hex 6 -->
+                                    <div class="hex-wrapper hex-wrapper-6">
+                                        <div class="hex-item hex-item-6">
+                                            <i class="bi bi-headset hex-icon"></i>
+                                            <div class="highlight-label">Support</div>
+                                            <p class="highlight-value">24/7 Assistance</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Mobile Stacked Grid (Hidden on Desktop) -->
+                            <div class="row g-4 hexagon-mobile-grid mt-4">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="highlight-card">
+                                        <div>
+                                            <div class="highlight-label">Setup Process</div>
+                                            <p class="highlight-value">Fast & Simple</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="highlight-card">
+                                        <div>
+                                            <div class="highlight-label">Revenue Model</div>
+                                            <p class="highlight-value">Competitive Share</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="highlight-card">
+                                        <div>
+                                            <div class="highlight-label">RTP</div>
+                                            <p class="highlight-value">Up to 97%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="highlight-card">
+                                        <div>
+                                            <div class="highlight-label">API</div>
+                                            <p class="highlight-value">Secure REST Integration</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="highlight-card">
+                                        <div>
+                                            <div class="highlight-label">Compatibility</div>
+                                            <p class="highlight-value">Mobile & Desktop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="highlight-card">
+                                        <div>
+                                            <div class="highlight-label">Support</div>
+                                            <p class="highlight-value">24/7 Technical Assistance</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. What You Get (Right) -->
+                <div class="col-lg-6 ps-lg-5 d-flex flex-column justify-content-center" data-aos="fade-left">
+                    <h2 class="section-title mb-5 text-white text-uppercase">Why Partner <span class="text-red">With
+                            Us?</span></h2>
+                    <p class="text-muted mb-5">Unlike aggregators, we provide direct support and official integration
+                        assistance for a smoother onboarding experience.</p>
+
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="bento-card">
+                                <i class="bi bi-diagram-3-fill text-red fs-4 mb-2"></i>
+                                <h6 class="text-white fw-bold mb-1">Official Integration</h6>
+                                <p class="text-muted small mb-0" style="font-size: 0.75rem;">Direct distribution
+                                    partnership.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bento-card">
+                                <i class="bi bi-cpu-fill text-red fs-4 mb-2"></i>
+                                <h6 class="text-white fw-bold mb-1">Reliable API</h6>
+                                <p class="text-muted small mb-0" style="font-size: 0.75rem;">99.9% uptime architecture.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bento-card">
+                                <i class="bi bi-person-lines-fill text-red fs-4 mb-2"></i>
+                                <h6 class="text-white fw-bold mb-1">Dedicated Manager</h6>
+                                <p class="text-muted small mb-0" style="font-size: 0.75rem;">1-on-1 business support.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bento-card">
+                                <i class="bi bi-rocket-takeoff-fill text-red fs-4 mb-2"></i>
+                                <h6 class="text-white fw-bold mb-1">Fast Deployment</h6>
+                                <p class="text-muted small mb-0" style="font-size: 0.75rem;">Launch within days.</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="bento-card bento-card-wide border-red-glow">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-cash-coin text-red fs-2 me-3"></i>
+                                    <div>
+                                        <h6 class="text-white fw-bold mb-1">Competitive Commercial Model</h6>
+                                        <p class="text-muted small mb-0" style="font-size: 0.8rem;">Maximize your ROI
+                                            with our specialized tier structures.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- 3. Integration Timeline (Horizontal Bottom) -->
+    <section class="py-5"
+        style="background-color: var(--bg-card); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="container-fluid px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-12" data-aos="fade-up">
+                    <h2 class="fw-bold mb-5 text-white text-uppercase text-center">Integration <span
+                            class="text-red">Process</span></h2>
+
+                    <div class="position-relative">
+                        <div class="flight-line d-none d-lg-block"></div>
+                        <div class="row justify-content-center g-4 text-center position-relative z-3">
+                            <div class="col-12 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="process-card h-100">
+                                    <i class="bi bi-headset step-icon"></i>
+                                    <h6 class="mb-2 fw-bold text-uppercase" style="color: var(--brand-red);">Step
+                                        1:<br>Contact Our Team</h6>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Share your platform
+                                        requirements and business goals.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="process-card h-100">
+                                    <i class="bi bi-diagram-3 step-icon"></i>
+                                    <h6 class="mb-2 fw-bold text-uppercase" style="color: var(--brand-red);">Step
+                                        2:<br>Technical Discussion</h6>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Review API documentation and
+                                        integration workflow.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="process-card h-100">
+                                    <i class="bi bi-code-square step-icon"></i>
+                                    <h6 class="mb-2 fw-bold text-uppercase" style="color: var(--brand-red);">Step
+                                        3:<br>API Integration</h6>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Our engineers assist with
+                                        implementation.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="process-card h-100">
+                                    <i class="bi bi-shield-check step-icon"></i>
+                                    <h6 class="mb-2 fw-bold text-uppercase" style="color: var(--brand-red);">Step
+                                        4:<br>Testing & Certification</h6>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Complete quality checks and
+                                        ensure smooth gameplay.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="500">
+                                <div class="process-card h-100 go-live-card" style="background: rgba(25, 25, 30, 0.8);">
+                                    <i class="bi bi-rocket-takeoff-fill step-icon"></i>
+                                    <h6 class="mb-2 fw-bold text-uppercase" style="color: var(--brand-red);">Step
+                                        5:<br>Go Live</h6>
+                                    <p class="text-white fw-bold mb-0" style="font-size: 0.75rem;">Launch Aviator and
+                                        start growing your business.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5 my-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="text-white fw-bold text-uppercase">Frequently Asked <span class="text-red">Questions</span>
+                </h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    How long does integration take?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Most integrations can be completed within a few business days, depending on your
+                                    platform requirements.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    Is Aviator mobile compatible?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes. Aviator works seamlessly across Android, iOS, and desktop devices.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    Is the game provably fair?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes. Every game round uses provably fair technology for transparent gameplay.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4">
+                                    Do you provide technical support?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely. Our team offers 24/7 technical and account support before and after
+                                    launch.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq5">
+                                    Can existing gaming platforms integrate Aviator?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes. Aviator is designed for easy integration with most modern iGaming platforms.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Section -->
+    <section class="bottom-cta-section position-relative border-top border-bottom border-danger">
+        <div class="cta-overlay"></div>
+        <div class="container position-relative z-3 py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-3 d-none d-lg-block"></div>
+
+                <div class="col-lg-6 text-center text-lg-start" data-aos="zoom-in">
+                    <h2 class="text-white fw-black text-uppercase mb-3 fs-2">Ready to Launch Aviator on Your Platform?
+                    </h2>
+                    <h6 class="text-light fw-normal mb-4">Partner with us to integrate the world's leading crash game
+                        and deliver an engaging gaming experience that drives player retention and business growth.</h6>
+
+                    <div
+                        class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-4 text-white font-small">
+                        <span><i class="bi bi-check2-circle text-red"></i> Fast Integration</span>
+                        <span><i class="bi bi-check2-circle text-red"></i> Competitive Model</span>
+                        <span><i class="bi bi-check2-circle text-red"></i> Dedicated Support</span>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="https://aviatorgames.ai/" target="_blank"
+                            class="btn btn-red btn-lg rounded-pill px-4 fw-bold shadow-red">
+                            Get Started Now <i class="bi bi-arrow-right-circle-fill ms-2"></i>
+                        </a>
+                        <a href="https://aviatorgames.ai/" target="_blank"
+                            class="btn btn-outline-light btn-lg rounded-pill px-4 fw-bold">
+                            Request API Documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Toolbar Area -->
+    <footer class="bg-black py-4 border-top border-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center align-items-center">
+                <div class="d-flex align-items-center">
+                    <img src="assets/Aviatorgameprovider.png" alt="Aviator Logo" style="height: 30px;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+
+        // AOS initialized, timeline animation removed as requested.
+
+        // Sticky CTA Bar Scroll Logic
+        window.addEventListener('scroll', function () {
+            const stickyBar = document.getElementById('stickyCtaBar');
+            if (window.scrollY > 400) {
+                stickyBar.classList.add('visible');
+            } else {
+                stickyBar.classList.remove('visible');
+            }
+        });
+    </script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="#" target="_blank" class="whatsapp-float">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Sticky Floating CTA -->
+    <div id="stickyCtaBar" class="sticky-cta-bar d-flex justify-content-between align-items-center">
+        <div class="d-none d-md-block text-white fw-bold ps-md-4">Ready to Launch Your Aviator Game?</div>
+        <div class="w-100 w-md-auto pe-3 pe-md-4 text-end">
+            <a href="https://aviatorgames.ai/" target="_blank" class="btn btn-red fw-bold rounded-pill px-4 py-2"
+                style="font-size: 1rem;">
+                Get API Access Now <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
