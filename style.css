@@ -130,22 +130,63 @@ body {
 /* --- Hero Section --- */
 .hero-transmission {
     position: relative;
-    padding: 60px 0 120px;
     background-color: #050505;
-    background-image: url('assets/banner4.png'); 
-    background-size: contain;
-    background-position: center right;
-    background-repeat: no-repeat;
     overflow: hidden;
-    font-family: 'Inter', sans-serif;
 }
 
-.hero-transmission::before {
+.hero-bg-wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+    padding: 60px 0 120px;
+    background-image: url('assets/banner4.png'); 
+    background-size: contain;
+    background-position: right 5% center;
+    background-repeat: no-repeat;
+}
+
+.hero-bg-wrapper::before {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 85%; height: 100%;
     background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,0.9) 65%, transparent 100%);
     z-index: 1;
+}
+
+@media (max-width: 991px) {
+    .hero-bg-wrapper {
+        background-image: none !important;
+        padding-bottom: 60px;
+    }
+    .hero-bg-wrapper::before {
+        display: none;
+    }
+}
+
+/* --- Premium Typed Text Background --- */
+.typed-bg-highlight {
+    background: rgba(230, 0, 26, 0.15);
+    padding: 0 12px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(230, 0, 26, 0.3);
+    box-shadow: 0 0 15px rgba(230, 0, 26, 0.2);
+    animation: bgPulse 2s infinite alternate;
+    font-size: 0.6em;
+    line-height: 1.3;
+    margin-top: 12px;
+}
+
+@keyframes bgPulse {
+    from {
+        background: rgba(230, 0, 26, 0.1);
+        box-shadow: 0 0 10px rgba(230, 0, 26, 0.1);
+    }
+    to {
+        background: rgba(230, 0, 26, 0.25);
+        box-shadow: 0 0 25px rgba(230, 0, 26, 0.5);
+    }
 }
 
 .hero-content {
@@ -478,9 +519,29 @@ body {
 /* --- Hexagon Orbital Wheel --- */
 .hexagon-container {
     position: relative;
-    width: 550px;
-    height: 550px;
+    width: 650px;
+    height: 650px;
     margin: 0 auto;
+}
+
+@media (max-width: 1399px) {
+    .hexagon-container {
+        transform: scale(0.85);
+        transform-origin: center center;
+    }
+}
+
+@media (max-width: 1199px) {
+    .hexagon-container {
+        transform: scale(0.75);
+        transform-origin: center center;
+    }
+}
+
+@media (max-width: 991px) {
+    .hexagon-container {
+        transform: scale(1); /* Resets on mobile where it stacks vertically */
+    }
 }
 
 .hexagon-center {
@@ -488,8 +549,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 140px;
-    height: 140px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     background: linear-gradient(#111216, #111216) padding-box, linear-gradient(135deg, #f4001c, #ff8a00) border-box;
     border: 2px solid transparent;
@@ -530,12 +591,12 @@ body {
 
 .hex-wrapper {
     position: absolute;
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     top: 50%;
     left: 50%;
-    margin-top: -80px;
-    margin-left: -80px;
+    margin-top: -100px;
+    margin-left: -100px;
 }
 
 .hex-item {
@@ -559,7 +620,7 @@ body {
 }
 
 .hex-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 8px;
     background: linear-gradient(135deg, #f4001c 0%, #ff8a00 100%);
     -webkit-background-clip: text;
@@ -567,7 +628,7 @@ body {
 }
 
 .highlight-label {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: white;
     text-transform: capitalize;
     font-weight: bold;
@@ -577,7 +638,7 @@ body {
 }
 
 .highlight-value {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
     font-weight: normal;
     text-align: center;
@@ -650,27 +711,27 @@ body {
 
 /* Positioning the 6 hex items in a circle */
 .hex-wrapper-1 {
-    transform: rotate(0deg) translateY(-180px);
+    transform: rotate(0deg) translateY(-240px);
 }
 
 .hex-wrapper-2 {
-    transform: rotate(60deg) translateY(-180px);
+    transform: rotate(60deg) translateY(-240px);
 }
 
 .hex-wrapper-3 {
-    transform: rotate(120deg) translateY(-180px);
+    transform: rotate(120deg) translateY(-240px);
 }
 
 .hex-wrapper-4 {
-    transform: rotate(180deg) translateY(-180px);
+    transform: rotate(180deg) translateY(-240px);
 }
 
 .hex-wrapper-5 {
-    transform: rotate(240deg) translateY(-180px);
+    transform: rotate(240deg) translateY(-240px);
 }
 
 .hex-wrapper-6 {
-    transform: rotate(300deg) translateY(-180px);
+    transform: rotate(300deg) translateY(-240px);
 }
 
 /* Counter-spin so text stays upright (static now) */
